@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css">
+    <script src="https://kit.fontawesome.com/c7ec8188f8.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <div class="main">
+        <i class="fa-solid fa-calculator"></i>
+        <h1>CASIO</h1>
+        <div class="div2"></div>
+        <input type="text" class="input" placeholder="0">
+        <div class="grid">
+            <button class="btn btn1">C</button>
+            <button class="btn btn1 btn2">CE</button>
+            <button class="btn btn3">%</button>
+            <button class="btn btn3 btn4">/</button>
+            <button class="btn btn5">7</button>
+            <button class="btn btn6">8</button>
+            <button class="btn btn7">9</button>
+            <button class="btn btn3 btn8">*</button>
+            <button class="btn btn9">4</button>
+            <button class="btn btn10">5</button>
+            <button class="btn btn11">6</button>
+            <button class="btn btn3 btn12">-</button>
+            <button class="btn btn13">1</button>
+            <button class="btn btn14">2</button>
+            <button class="btn btn15">3</button>
+            <button class="btn btn3 btn16">+</button>
+            <button class="btn btn17">0</button>
+            <button class="btn btn18">.</button>
+            <button class="btn btn19">=</button>
+        </div>
+    </div>
+    <script>
+let btns=document.querySelectorAll("button");
+    let inp=document.querySelector("input")
+    
+
+    let handleClick=(e)=>{
+        let select = e.target.innerText
+        console.log(select);
+
+       
+        if(select == "="){
+            if(select.includes("%")){
+                let result=select.split("%")
+inp.value=result[1]/100*result[0]
+            }
+            else{
+                inp.value=eval(inp.value)
+            }
+            inp.value=eval(inp.value)
+        console.log(eval(inp.value))
+        }
+        else if(select=='CE'){
+            
+            inp.value=inp.value.slice(0,-1)
+        }
+        
+        else if(select=='C'){
+            inp.value=''
+        }
+      
+        else{
+        inp.value += select;
+        }
+    }
+
+    btns.forEach((btn)=>{
+        btn.addEventListener("click",handleClick)
+    })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,126 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+.main {
+  position: relative;
+  margin: auto;
+  height: 65vh;
+  top: 15vh;
+  border-radius: 25px;
+  width: 350px;
+  background-image: linear-gradient(to  bottom, rgb(221, 201, 201),red);
+  box-shadow: 1px 1px 10px 3px rgb(192, 140, 140);
+}
+.main>i{
+    position: absolute;
+    color:rgb(241, 91, 91);
+    top:10px;
+    left:15px;
+    font-size: 30px;
+    z-index: 5;
+}
+.main>h1{
+    position: absolute;
+    color:rgb(128, 92, 92);
+    top:8px;
+    left:45px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 30px;
+    z-index: 5;
+}
+.div2 {
+  position: relative;
+  height: 8%;
+  width: 30%;
+  border-radius: 10px;
+  top: 10px;
+  left: 67%;
+  border: none;
+  overflow: hidden;
+  outline: none;
+  background-image: linear-gradient(to left bottom, rgb(133, 130, 130),rgb(247, 71, 71));
+}
+.div2:after {
+  position: absolute;
+  content: "";
+  border-radius: 10px;
+  height: 100%;
+  width: 100%;
+  animation: div2 2s linear  forwards infinite;
+  left: -100%;
+}
+@keyframes div2 {
+  0% {
+    left: -100%;
+    background-color: rgb(219, 131, 131);
+
+  }
+  20% {
+    left: -80%;
+    background-color: rgb(219, 131, 131);
+
+  }
+  40% {
+    left: -60%;
+  }
+  60% {
+    left: -40%;
+  }
+  80% {
+    left: -20%;
+  }
+  100% {
+    left: 0%;
+  }
+}
+.input {
+  position: absolute;
+  height: 16%;
+  width: 95%;
+  border-radius: 10px;
+  top: 55px;
+  font-size: 30px;
+  left: 8px;
+  border: none;
+  outline: none;
+}
+::placeholder{
+  position: absolute;
+  top:15px;
+  left:5px;
+  font-size: 30px;
+}
+.grid{
+    display: grid;
+    height:63%;
+    left:8px;
+    width:95%;
+    position: relative;
+    top: 26%;
+    grid-template-columns: repeat(auto-fill, minmax(72px, 1fr));
+    grid-template-rows: 45px;
+    grid-gap: 9px;
+    grid-auto-rows: 45px;
+    border-radius: 10px;
+}
+.btn{
+    border-radius: 7px;
+    font-size: 20px;
+    border: none;
+}
+.btn:hover{
+    cursor: pointer;
+}
+.btn19{
+grid-column: 3/5;
+background-color: rgb(144, 245, 223);
+}
+.btn1{
+    background-color: rgb(247, 159, 100);
+}
+.btn3{
+    background-color: rgb(144, 245, 223);
+
+}
+
